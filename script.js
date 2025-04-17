@@ -1,15 +1,20 @@
-// Function to start the splash screen animation and hide after timeout
+// Splash screen logic
 function startSplashScreen() {
   const splash = document.getElementById('splash-screen');
 
-  // Wait for 4 seconds before starting the fade out
+  // Wait for 4 seconds, then start fade out
   setTimeout(() => {
     splash.classList.add('fade-out');
+
+    // After fade-out animation ends (1 second), hide splash and redirect
     setTimeout(() => {
-      splash.style.display = 'none'; // Remove the splash screen after the fade
-    }, 1000); // Fade duration
-  }, 4000); // Duration before fade out
+      splash.style.display = 'none';
+
+      // Redirect to main menu
+      window.location.href = "menu.html";
+    }, 1000); // matches CSS fade-out transition duration
+  }, 4000); // how long splash screen stays visible
 }
 
-// Call startSplashScreen when the page loads
+// Run splash logic on window load
 window.onload = startSplashScreen;
