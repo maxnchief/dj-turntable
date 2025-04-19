@@ -1,19 +1,10 @@
-var client_id = 'd8dc4a88d7a5449caeb1f9057b2494fb';
-var redirect_uri = 'http://127.0.0.1:8888/callback';
+let player
 
-var app = express();
+function onYouTubeIframeAPIReady () {
+    console.log("api is loaded")
 
-app.get('/login', function(req, res) {
-
-  var state = generateRandomString(16);
-  var scope = 'user-read-private user-read-email';
-
-  res.redirect('https://accounts.spotify.com/authorize?' +
-    querystring.stringify({
-      response_type: 'code',
-      client_id: client_id,
-      scope: scope,
-      redirect_uri: redirect_uri,
-      state: state
-    }));
-});
+    player = new YT.Player('player', {
+        height: 200,
+        width: 200,
+        videoId: 'M7lc1UVf-VE',
+})}

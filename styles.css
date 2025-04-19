@@ -19,6 +19,8 @@ body > div {
     align-content: center;
     width: 70%;
     height: 70%;
+    max-width: 750px;
+    max-height: 750px;
     background-color: grey;
     border: 5px solid #000;
     box-shadow: 0 0 10px #000;
@@ -27,7 +29,9 @@ body > div {
     width: 40vmin;
     height: 40vmin;
     border-radius: 50%;
-    background: black
+    background: repeating-radial-gradient(rgb(0, 0, 0), rgb(6, 6, 6) 3px, rgb(0, 0, 0) 3px);
+    position: relative; /* Ensure it can be layered */
+    z-index: 2; /* Higher z-index to appear in front */
 }
 
 @keyframes spin {
@@ -54,4 +58,10 @@ div:first-of-type {
     justify-content: space-around;
     align-items: center;
     
+}
+
+#player {
+    border-radius: 50%;
+    position: relative; /* Ensure proper stacking context */
+    z-index: 3; /* Lower z-index to place it behind */
 }
