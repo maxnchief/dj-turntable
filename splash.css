@@ -1,0 +1,92 @@
+/* reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* splash container */
+  #splash-screen {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1e1e1e 0%, #000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* wrapper to size the vinyl */
+  .vinyl-wrapper {
+    width: 40vmin;
+    height: 40vmin;
+    max-width: 250px;
+    max-height: 250px;
+    perspective: 1000px;
+    margin-bottom: 1rem;
+  }
+  
+  /* the spinning vinyl disc */
+  .vinyl {
+    width: 100%;
+    height: 100%;
+    background: repeating-radial-gradient(
+      circle at center,
+      #111,
+      #333 3px,
+      #000 3px
+    );
+    border: 0.8vmin solid #222;
+    border-radius: 50%;
+    position: relative;
+    animation: spin 3s linear infinite, flip 6s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  }
+  
+  /* center spindle dot */
+  .vinyl::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12%;
+    height: 12%;
+    background: crimson;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* splash headline */
+  #splash-screen h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-top: 0.5rem;
+  }
+  
+  /* fade‑out helper */
+  .fade-out {
+    opacity: 0 !important;
+  }
+  
+  /* spin & flip keyframes */
+  @keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes flip {
+    0%,100% { transform: rotateY(0deg); }
+    50%     { transform: rotateY(180deg); }
+  }
+  
