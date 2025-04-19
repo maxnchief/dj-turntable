@@ -24,6 +24,8 @@ body > div {
     background-color: grey;
     border: 5px solid #000;
     box-shadow: 0 0 10px #000;
+    position: relative;
+    z-index: 2;
 }
 .disc {
     width: 40vmin;
@@ -31,7 +33,7 @@ body > div {
     border-radius: 50%;
     background: repeating-radial-gradient(rgb(0, 0, 0), rgb(6, 6, 6) 3px, rgb(0, 0, 0) 3px);
     position: relative; /* Ensure it can be layered */
-    z-index: 2; /* Higher z-index to appear in front */
+    z-index: 3; /* Higher z-index to appear in front */
 }
 
 @keyframes spin {
