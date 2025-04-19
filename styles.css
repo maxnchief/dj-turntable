@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset and Base Styles */
 * {
   box-sizing: border-box;
@@ -116,3 +117,72 @@ body, html {
     height: 70vw;
   }
 }
+=======
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+body > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+    height: 70%;
+    max-width: 750px;
+    max-height: 750px;
+    background-color: grey;
+    border: 5px solid #000;
+    box-shadow: 0 0 10px #000;
+}
+.disc {
+    width: 40vmin;
+    height: 40vmin;
+    border-radius: 50%;
+    background: repeating-radial-gradient(rgb(0, 0, 0), rgb(6, 6, 6) 3px, rgb(0, 0, 0) 3px);
+    position: relative; /* Ensure it can be layered */
+    z-index: 2; /* Higher z-index to appear in front */
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes scratch {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+
+div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+#player {
+    border-radius: 50%;
+    position: relative; /* Ensure proper stacking context */
+    z-index: -1; /* Lower z-index to place it behind */
+}
+>>>>>>> 995441bb16927cbf3cc6b348d4f64a41898d6f56

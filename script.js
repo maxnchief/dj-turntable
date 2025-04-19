@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Splash screen logic
 function startSplashScreen() {
   const splash = document.getElementById('splash-screen');
@@ -18,3 +19,15 @@ function startSplashScreen() {
 
 // Run splash logic on window load
 window.onload = startSplashScreen;
+=======
+let player
+
+function onYouTubeIframeAPIReady () {
+    console.log("api is loaded")
+
+    player = new YT.Player('player', {
+        height: 200,
+        width: 200,
+        videoId: 'M7lc1UVf-VE',
+})}
+>>>>>>> 995441bb16927cbf3cc6b348d4f64a41898d6f56
