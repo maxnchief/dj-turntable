@@ -63,5 +63,5 @@ div:first-of-type {
 #player {
     border-radius: 50%;
     position: relative; /* Ensure proper stacking context */
-    z-index: 3; /* Lower z-index to place it behind */
+    z-index: -1; /* Lower z-index to place it behind */
 }
