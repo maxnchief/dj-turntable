@@ -31,8 +31,8 @@ body > div {
 }
 
 .disc {
-    width: 40vmin;
-    height: 40vmin;
+    width: 55vmin;
+    height: 55vmin;
     border-radius: 50%;
     background: repeating-radial-gradient(rgb(0, 0, 0), rgb(6, 6, 6) 3px, rgb(0, 0, 0) 3px);
     position: relative; /* Ensure it can be layered */
@@ -59,6 +59,8 @@ body > div {
 
 #player {
     border-radius: 50%;
+    clip-path: circle(30% at center);
+    overflow: hidden;
     position: relative; /* Ensure proper stacking context */
     z-index: -1; /* Lower z-index to place it behind */
 }

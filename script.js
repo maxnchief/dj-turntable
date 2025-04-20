@@ -13,8 +13,8 @@ function onYouTubeIframeAPIReady() {
     console.log("API is loaded");
 
     player = new YT.Player('player', {
-        height: 200,
-        width: 200,
+        height: 300,
+        width: 300,
         videoId: videoId,
         playerVars: {
             playersinline: 1,
