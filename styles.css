@@ -18,8 +18,8 @@ body > div {
     flex-direction: column; /* Stack children vertically */
     justify-content: center; /* Center items vertically */
     align-items: center; /* Center items horizontally */
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
     max-width: 750px;
     max-height: 750px;
     background-color: grey;
@@ -78,4 +78,79 @@ body > div {
     left: 50%; /* Move it 50% right from the left */
     transform: translate(-50%, -50%); /* Center it by offsetting its own width and height */
     z-index: 2; /* Ensure it appears above other elements if needed */
+}
+
+/* Style the volume slider */
+#YouTube-player-volume {
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    appearance: none; /* Remove default styling for other browsers */
+    width: 200px; /* Set the width of the slider */
+    height: 10px; /* Set the height of the slider */
+    background: linear-gradient(to right, #444, #222); /* Retro gradient background */
+    border: 1px solid #000; /* Add a border for a retro look */
+    border-radius: 5px; /* Slightly round the edges */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); /* Add an inset shadow for depth */
+    outline: none; /* Remove focus outline */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Style the slider thumb */
+#YouTube-player-volume::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    appearance: none; /* Remove default styling for other browsers */
+    width: 20px; /* Set the width of the thumb */
+    height: 20px; /* Set the height of the thumb */
+    background: radial-gradient(circle, #fff 30%, #ccc 70%, #999); /* Retro-style thumb */
+    border: 1px solid #000; /* Add a border for a retro look */
+    border-radius: 50%; /* Make the thumb circular */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Style the slider thumb for Firefox */
+#YouTube-player-volume::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #fff 30%, #ccc 70%, #999);
+    border: 1px solid #000;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/* Style the slider track for Firefox */
+#YouTube-player-volume::-moz-range-track {
+    background: linear-gradient(to right, #444, #222);
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Style all buttons */
+button {
+    background: linear-gradient(to bottom, #444, #222); /* Retro gradient background */
+    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif; /* Simple retro font */
+    font-size: 14px; /* Button text size */
+    border: 2px solid #000; /* Black border for retro look */
+    border-radius: 3px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Padding for button size */
+    box-shadow: 0 3px #000, inset 0 2px 5px rgba(255, 255, 255, 0.2); /* Outer shadow and inner highlight */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Make text uppercase for retro style */
+    letter-spacing: 1px; /* Add spacing between letters */
+    transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(to bottom, #555, #333); /* Slightly lighter gradient on hover */
+    box-shadow: 0 3px #000, inset 0 2px 5px rgba(255, 255, 255, 0.4); /* Enhance inner highlight */
+}
+
+/* Button active (pressed) effect */
+button:active {
+    background: linear-gradient(to bottom, #222, #000); /* Darker gradient when pressed */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for pressed effect */
+    transform: translateY(2px); /* Slightly move button down */
 }
