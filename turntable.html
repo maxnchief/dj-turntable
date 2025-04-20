@@ -13,6 +13,18 @@
                 <div id="player-container">
                     <div id="player"></div>
                 </div>
+                
+            </div>
+            <div class="controls">
+                <button onclick="startVideo()">Play</button>
+                <button onclick="pauseVideo()">Pause</button>
+                <button onclick="stopVideo()">Stop</button>
+            </div>
+            <div class="volume">
+                <input id="YouTube-player-volume" type="range" min="0" max="100" value="50"
+                onchange="volumeChange(this.value);">
+                <label for="YouTube-player-volume">volume</label>
+                <button id="change-video">Change</button>
             </div>
         </div>
         
