@@ -37,6 +37,8 @@ body > div {
     background: repeating-radial-gradient(rgb(0, 0, 0), rgb(6, 6, 6) 3px, rgb(0, 0, 0) 3px);
     position: relative; /* Ensure it can be layered */
     z-index: 3; /* Higher z-index to appear in front */
+    animation: spin 1.8s infinite linear;
+    animation-play-state: paused;
 }
 
 @keyframes spin {
@@ -44,7 +46,7 @@ body > div {
         transform:rotate(0deg);
     }
     to {
-        transform:rotate(360deg);
+        transform:rotate(359deg);
     }
 }
 

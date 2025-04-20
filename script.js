@@ -63,8 +63,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Set a specific video ID to load when the button is clicked
     changeVideoButton.addEventListener("click", () => {
-        const specificVideoId = "dQw4w9WgXcQ"; // Replace with your desired YouTube video ID
+        const specificVideoId = "3BFTio5296w"; // Replace with your desired YouTube video ID
         videoId = specificVideoId; // Update the videoId variable
         player.loadVideoById(videoId); // Load the new video in the player
+    });
+
+    const disc = document.querySelector('.disc');
+    const playButton = document.querySelector('button[onclick="startVideo()"]');
+    const pauseButton = document.querySelector('button[onclick="pauseVideo()"]');
+    const stopButton = document.querySelector('button[onclick="stopVideo()"]');
+
+    // Play button: Start spinning the disc
+    playButton.addEventListener('click', () => {
+        disc.style.animationPlayState = 'running';
+    });
+
+    // Pause button: Pause the spinning animation
+    pauseButton.addEventListener('click', () => {
+        disc.style.animationPlayState = 'paused';
+    });
+
+    // Stop button: Reset the spinning animation to the start
+    stopButton.addEventListener('click', () => {
+        disc.style.animation = 'none'; 
+        void disc.offsetWidth; 
+        disc.style.animation = '';
     });
 });
