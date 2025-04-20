@@ -15,8 +15,9 @@ body > div {
 
 .box {
     display: flex;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
     width: 70%;
     height: 70%;
     max-width: 750px;
@@ -26,7 +27,9 @@ body > div {
     box-shadow: 0 0 10px #000;
     position: relative;
     z-index: 2;
+    gap: 20px; /* Add spacing between the children */
 }
+
 .disc {
     width: 40vmin;
     height: 40vmin;
@@ -54,16 +57,23 @@ body > div {
     }
 }
 
-div:first-of-type {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-
 #player {
     border-radius: 50%;
     position: relative; /* Ensure proper stacking context */
     z-index: -1; /* Lower z-index to place it behind */
+}
+
+.controls, .volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Add spacing between buttons and inputs */
+}
+
+#player-container {
+    position: absolute; /* Position it relative to the nearest positioned ancestor */
+    top: 50%; /* Move it 50% down from the top */
+    left: 50%; /* Move it 50% right from the left */
+    transform: translate(-50%, -50%); /* Center it by offsetting its own width and height */
+    z-index: 2; /* Ensure it appears above other elements if needed */
 }

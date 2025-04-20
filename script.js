@@ -41,6 +41,10 @@ function stopVideo() {
     player.stopVideo();
 }
 
+function volumeChange(volume) {
+    player.setVolume(volume)
+}
+
 function onPlayerReady() {
     console.log("Player is ready");
 }
