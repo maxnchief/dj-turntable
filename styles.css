@@ -32,8 +32,8 @@ body > div {
 }
 
 .disc {
-    width: 50vmin;
-    height: 50vmin;
+    width: 50vmin;  /* Using 50% of the smallest viewport dimension */
+    height: 50vmin; /* Ensure the height is the same as the width */
     border-radius: 50%;
     background: repeating-radial-gradient(rgb(0, 0, 0), rgb(6, 6, 6) 3px, rgb(0, 0, 0) 3px);
     position: relative;
