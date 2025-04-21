@@ -61,7 +61,7 @@ body > div {
 
 #player {
     border-radius: 50%;
-    clip-path: circle(30% at center);
+    clip-path: circle(27% at center);
     overflow: hidden;
     position: relative; /* Ensure proper stacking context */
     z-index: -1; /* Lower z-index to place it behind */
