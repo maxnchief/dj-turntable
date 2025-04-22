@@ -1,33 +1,47 @@
-<html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script> 
-        <script src="https://www.youtube.com/iframe_api"></script>
-    </head>
-    <body>
-        <div class="box">
-            <div class="disc">
-                <div id="player-container">
-                    <div id="player"></div>
-                </div>
-                
-            </div>
-            <div class="controls">
-                <button onclick="startVideo()">Play</button>
-                <button onclick="pauseVideo()">Pause</button>
-                <button onclick="stopVideo()">Stop</button>
-            </div>
-            <div class="volume">
-                <input id="YouTube-player-volume" type="range" min="0" max="100" value="50"
-                onchange="volumeChange(this.value);">
-                <label for="YouTube-player-volume">volume</label>
-                <button id="change-video">Change</button>
+<!DOCTYPE html>
+<html lang= 'en'>
+<head>
+    <title>Retro Disc Player</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Listen to your favorite music with the Retro Disc Player. Stream music, explore new songs, and enjoy the classics.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://www.youtube.com/iframe_api" defer></script>
+</head>
+<body>
+    <div class="box">
+        <div class="disc">
+            <div id="player-container">
+                <div id="player"></div>
             </div>
         </div>
-        
-    </body>
 
+        <div class="info">
+            <span id="song-title">Title: --</span>
+            <span id="song-artist">Artist: --</span>
+        </div>
+
+        <div class="controls">
+            <button onclick="startVideo()">Play</button>
+            <button onclick="pauseVideo()">Pause</button>
+            <button onclick="stopVideo()">Stop</button>
+            <button id="exit-button">Exit</button>
+            <div class="timer">
+                <span id="current-time">00:00</span>
+            </div>
+        </div>
+
+        <div class="volume">
+            <input id="YouTube-player-volume" type="range" min="0" max="100" value="50" onchange="volumeChange(this.value);">
+            <label for="YouTube-player-volume">Volume</label>
+            <button id="change-video">Change</button>
+        </div>
+
+        <div class="search">
+            <input id="search-input" type="text" placeholder="Search by song title...">
+            <button id="search-button">Search</button>
+        </div>
+    </div>
+</body>
 </html>
