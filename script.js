@@ -3,12 +3,15 @@ let currentVideoTime = 0;
 let timerInterval;
 
 const videoData = [
-    { id: 'iNP8_xtq8YU', title: 'Retro Groove', artist: 'Artist A' },
-    { id: '3Mt-q96kvl0', title: 'Analog Dreams', artist: 'Artist B' },
     { id: 'X_SEwgDl02E', title: 'Solo', artist: 'Frank Ocean' },
     { id: 'k6XBs3P99rc', title: 'Stronger', artist: 'Kanye West' },
-    { id: 'sQRVabRMWQI', title: 'Big Mix', artist: 'Bruno Mars, Dua Lipa' },
-    { id: '', title: 'Solo', artist: '' }
+    { id: '8UVNT4wvIGY', title: 'Somebody That I Used to Know', artist: 'Gotye' },
+    { id: '5uxwgU37KLY', title: 'See You Again', artist: 'Tyler, The Creator ft. Kali Uchis' },
+    { id: 'vDUlQw3Oi68', title: 'See You Again', artist: 'Tyler, The Creator ft. Kali Uchis' },
+    { id: 'm2OR_JaXDaM', title: 'See You Again', artist: 'Tyler, The Creator ft. Kali Uchis' },
+    { id: 'KZADFte021Q', title: 'See You Again', artist: 'Tyler, The Creator ft. Kali Uchis' },
+    { id: '', title: 'See You Again', artist: 'Tyler, The Creator ft. Kali Uchis' }
+    
 ];
 
 let current = videoData[Math.floor(Math.random() * videoData.length)];
