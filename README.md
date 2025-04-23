@@ -2,6 +2,9 @@
 
 Welcome to **Record Player**, a retro-inspired music player that combines the aesthetics of vinyl records with modern streaming capabilities. This app allows users to play, pause, and stop YouTube videos while simulating a spinning vinyl disc. It also includes features like volume control, song search, and a splash screen for a polished user experience.
 
+
+![screenshot](images/Screenshot%202025-04-22%20220831.png)
+
 ---
 
 ## Features 
@@ -36,6 +39,10 @@ The splash screen is implemented using a combination of CSS animations and JavaS
 The app is fully responsive, ensuring compatibility across various devices and screen sizes.
 
 ---
+
+## Live Demo 
+
+Check out the live version [here](https://maxnchief.github.io/dj-turntable/).
 
 ## Authors 
 
