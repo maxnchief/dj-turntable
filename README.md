@@ -46,7 +46,7 @@ Check out the live version [here](https://maxnchief.github.io/dj-turntable/).
 
 ## Authors 
 
-Malik Vance [GitHub: SpaceDandy15](https://github.com/SpaceDandy15)
-Maxwell Logan [GitHub: maxnchief](https://github.com/maxnchief)
+Malik Vance [GitHub: SpaceDandy15](https://github.com/SpaceDandy15) [LinkedIn: Malik Vance](https://www.linkedin.com/in/malik-vance/)
+Maxwell Logan [GitHub: maxnchief](https://github.com/maxnchief)  [LinkedIn: Maxwell Logan](https://www.linkedin.com/in/maxwell-logan/)
 
 
